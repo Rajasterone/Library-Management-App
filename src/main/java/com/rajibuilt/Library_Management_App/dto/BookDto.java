@@ -1,22 +1,18 @@
 package com.rajibuilt.Library_Management_App.dto;
 
-
-import com.rajibuilt.Library_Management_App.entity.User;
-import lombok.AllArgsConstructor;
 import lombok.Getter;
-import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.time.LocalDateTime;
 
 @Getter
 @Setter
-@NoArgsConstructor
-@AllArgsConstructor
 public class BookDto {
 
-    private Long id;
+    private int bookId;
     private String title;
     private String author;
+    private LocalDateTime borrowedTime;
+    private LocalDateTime returnTime;
     private boolean borrowed;
-    private User borrowedBy;
-
 }
