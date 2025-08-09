@@ -7,11 +7,15 @@ import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
+import lombok.Getter;
+import lombok.Setter;
 
 
 /**
  * Address entity class representing the Address table in the database.
  */
+@Setter
+@Getter
 @Entity
 public class Address {
 
@@ -41,60 +45,4 @@ public class Address {
     @NotNull(message = "Pincode cannot be null")
     private Long pincode; // Pincode of the address
 
-    // Getters and Setters (Generated Manually)
-    public int getAddressId() {
-        return addressId;
-    }
-
-    public void setAddressId(int addressId) {
-        this.addressId = addressId;
-    }
-
-    public Integer getHouseNumber() {
-        return houseNumber;
-    }
-
-    public void setHouseNumber(Integer houseNumber) {
-        this.houseNumber = houseNumber;
-    }
-
-    public String getArea() {
-        return area;
-    }
-
-    public void setArea(String area) {
-        this.area = area;
-    }
-
-    public String getCity() {
-        return city;
-    }
-
-    public void setCity(String city) {
-        this.city = city;
-    }
-
-    public String getState() {
-        return state;
-    }
-
-    public void setState(String state) {
-        this.state = state;
-    }
-
-    public String getCountry() {
-        return country;
-    }
-
-    public void setCountry(String country) {
-        this.country = country;
-    }
-
-    public Long getPincode() {
-        return pincode;
-    }
-
-    public void setPincode(Long pincode) {
-        this.pincode = pincode;
-    }
 }
